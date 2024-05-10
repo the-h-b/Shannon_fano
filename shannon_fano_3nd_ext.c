@@ -35,9 +35,9 @@ void shannonFano(CodeWord *words, int start, int end) {
         }
     }
 
-    // Assign '0' to the first group and '1' to the second group
+    // Assign '1' to the first group and '0' to the second group
     for (int i = start; i <= end; i++) {
-        strcat(words[i].code, (i <= split) ? "0" : "1");
+        strcat(words[i].code, (i <= split) ? "1" : "0");
     }
 
     // Recursively apply Shannon-Fano on each partition
